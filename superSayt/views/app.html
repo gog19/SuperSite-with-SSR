@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dizayn/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>EJS</title>
+</head>
+
+<body>
+
+    <main class="main container">
+        <section class="sidebar">
+            <header class="dash-header pt-5">
+                <a class="logo" href='/'><%=siteName %></a>
+            </header>
+            <ul class="list-unstyled mt-5 pb-3">
+                <li class="py-3 menu-item px-5">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[0]%>
+                    </a>
+                </li>
+                <li class="py-3 menu-item px-5 active">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[1]%>
+                    </a>
+                </li>
+                <li class="py-3 menu-item px-5">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[2]%>
+                    </a>
+                </li>
+                <li class="py-3 menu-item px-5">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[3]%>
+                    </a>
+                </li>
+                <li class="py-3 menu-item px-5">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[4]%>
+                    </a>
+                </li>
+                <li class="py-3 menu-item px-5 pb-4">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[5]%>
+                    </a>
+                </li>
+                <li class="py-3 menu-item pt-4 border-top px-5">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[6]%>
+                    </a>
+                </li>
+                <li class="py-3 menu-item px-5">
+                    <a href='/' class="menu-link">
+                        <%=sideBarMenu[7]%>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    
+        <section class="content px-4">
+            <header class="ticket-header d-flex justify-content-between align-items-center mb-5">
+                <h2 class="tickets pt-4 mb-0"> <%=title%> </h2>
+                <div class="pt-4">
+                    <button class="border-0 bg-transparent mb-0">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="border-0 bg-transparent mb-0">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <span class="border-left pl-2 h5"><%=username%></span>
+                </div>
+            </header>
+
+            <section class="bg-white py-4 rounded">
+                <header class="d-flex justify-content-between mb-3 px-4">
+                    <h6 class="content-title"><%=topTitle%></h6>
+                    <div class="d-flex align-items-center">
+                        <button class="border-0 bg-transparent">
+                            <i class="fas fa-sort"></i>
+                            <%=sort%>
+                        </button>
+                        <button class="border-0 bg-transparent">
+                            <i class="fas fa-filter"></i>
+                            <%=filter%>
+                        </button>
+                    </div>
+                </header>
+                <ul class="list-unstyled d-flex border-bottom pb-2 px-4">
+                    <li class="top-data details">
+                        <%=topData[0]%>
+                    </li>
+                    <li class="top-data names">
+                        <%=topData[1]%>
+                    </li>
+                    <li class="top-data dates">
+                        <%=topData[2]%>
+                    </li>
+                    <li class="top-data">
+                        <%=topData[3]%>
+                    </li>
+                </ul>
+
+                <ol class="list-unstyled">
+                    <li class="d-flex align-items-center px-4 users border-bottom pb-3">
+                        <div class="d-flex flex-column details">
+                            <span><%=userDetails[0]%></span>
+                            <span class="date"><%=updated%></span>
+                        </div>
+                        <div class="d-flex flex-column names">
+                            <span class="mr-4 pr-3"><%=userNames[0]%></span>
+                            <span class="date"><%=customerDate%></span>
+                        </div>
+                        <div class="d-flex flex-column pr-4 dates">
+                            <span><%=dates[0]%></span>
+                            <span class="date"><%=time[0]%></span>
+                        </div>
+                        <button class="border-0 bg-danger text-white rounded-circle p-2"><%=btn[0]%></button>
+                    </li>
+                    <li class="d-flex align-items-center px-4 users border-bottom pb-3 pt-3">
+                        <div class="d-flex flex-column details">
+                            <span><%=userDetails[1]%></span>
+                            <span class="date"><%=updated%></span>
+                        </div>
+                        <div class="d-flex flex-column names">
+                            <span class="mr-4 pr-3"><%=userNames[1]%></span>
+                            <span class="date"><%=customerDate%></span>
+                        </div>
+                        <div class="d-flex flex-column pr-4 dates">
+                            <span><%=dates[1]%></span>
+                            <span class="date"><%=time[1]%></span>
+                        </div>
+                        <button class="border-0 bg-success text-white rounded-circle p-2"><%=btn[1]%></button>
+                    </li>
+                    <li class="d-flex align-items-center px-4 users border-bottom pb-3 pt-3">
+                        <div class="d-flex flex-column details">
+                            <span><%=userDetails[2]%></span>
+                            <span class="date"><%=updated%></span>
+                        </div>
+                        <div class="d-flex flex-column names">
+                            <span class="mr-4 pr-3"><%=userNames[2]%></span>
+                            <span class="date"><%=customerDate%></span>
+                        </div>
+                        <div class="d-flex flex-column pr-4 dates">
+                            <span><%=dates[2]%></span>
+                            <span class="date"><%=time[2]%></span>
+                        </div>
+                        <button class="border-0 bg-danger text-white rounded-circle p-2"><%=btn[0]%></button>
+                    </li>
+                    <li class="d-flex align-items-center px-4 users border-bottom pb-3 pt-3">
+                        <div class="d-flex flex-column details">
+                            <span><%=userDetails[3]%></span>
+                            <span class="date"><%=updated%></span>
+                        </div>
+                        <div class="d-flex flex-column names pl-2">
+                            <span class="mr-4 pr-3"><%=userNames[3]%></span>
+                            <span class="date"><%=customerDate%></span>
+                        </div>
+                        <div class="d-flex flex-column pr-4 dates pl-3">
+                            <span><%=dates[3]%></span>
+                            <span class="date"><%=time[3]%></span>
+                        </div>
+                        <button class="border-0 bg-warning text-white rounded-circle p-2"><%=btn[2]%></button>
+                    </li>
+                    <li class="d-flex align-items-center px-4 users border-bottom pb-3 pt-3">
+                        <div class="d-flex flex-column details">
+                            <span><%=userDetails[4]%></span>
+                            <span class="date"><%=updated%></span>
+                        </div>
+                        <div class="d-flex flex-column names">
+                            <span class="mr-4 pr-3"><%=userNames[4]%></span>
+                            <span class="date"><%=customerDate%></span>
+                        </div>
+                        <div class="d-flex flex-column pr-4 dates">
+                            <span><%=dates[4]%></span>
+                            <span class="date"><%=time[4]%></span>
+                        </div>
+                        <button class="border-0 bg-danger text-white rounded-circle p-2"><%=btn[0]%></button>
+                    </li>
+                </ol>
+            </section>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/5ecb376021.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
